@@ -9,37 +9,37 @@
 let
   inherit (stdenvNoCC.hostPlatform) system;
   shaMap = {
-    i686-linux = "1dvphicwv5zc4lnpqd51cpqaj9myj59ph9zaawgcscb90dwh1wkq";
-    x86_64-linux = "0c5j4ypnpdr59b1mzddccs8is04khzlpk15lyvsp5isdb8mrn925";
-    armv6l-linux = "08immvd4865z2kvp5y2d82imya9042nyxm37vyal6wb6cxi87mww";
-    armv7l-linux = "0g92ahn13livm007hfr7xs1f46d3hdagyfi6rgmk846dgpgkaj35";
-    aarch64-linux = "1n7yqbhq6sm0jhf570igh2f2vcx97aj0m0mykcdz280c3xa6r13z";
-    x86_64-darwin = "0dq1y460fv6jv7nfpz4hrg2ray20n6glka2rbha10vbp7piw9szd";
-    aarch64-darwin = "1v3xvixpv8lc23ar0xcilf6dw7iwq2y6pn093wr68kk4zpl3hzz2";
+    i686-linux = "1vbic8qkzh4r8r7hszp7qwxh1na7g1fch5f10l00mx7irz6l83rr";
+    x86_64-linux = "1sqfb0gxvnd201xjxq15f0is8x17ya2wiaxjvqllspncavp7fq2i";
+    armv6l-linux = "0hal4m209nimpmrqci9bqipvrpgfragaxfbakhrg0lqfhc1gri1c";
+    armv7l-linux = "0fjkpln6jwq7ksram4w3166yrfwgzmg2yx6kfny0halfhv10hhmw";
+    aarch64-linux = "0xa6j1nl3fxcxvhh62g9skx7a5p5r9p69n7nrw332fza9r4w0h40";
+    x86_64-darwin = "1k30jl9qyb7xxqnyn9kh448qlg43i3k823xan8z3f7k1ryijbv0p";
+    aarch64-darwin = "18ywi3wn8ijyj9i9nscdb30sdg8ainnprmj9wmwkkbvpgk0mc9zj";
   };
 
   urlMap = {
-    i686-linux = "https://github.com/complex-gh/seedify/releases/download/v1.0.1/seedify_1.0.1_Linux_i386.tar.gz";
-    x86_64-linux = "https://github.com/complex-gh/seedify/releases/download/v1.0.1/seedify_1.0.1_Linux_x86_64.tar.gz";
-    armv6l-linux = "https://github.com/complex-gh/seedify/releases/download/v1.0.1/seedify_1.0.1_Linux_armv6.tar.gz";
-    armv7l-linux = "https://github.com/complex-gh/seedify/releases/download/v1.0.1/seedify_1.0.1_Linux_armv7.tar.gz";
-    aarch64-linux = "https://github.com/complex-gh/seedify/releases/download/v1.0.1/seedify_1.0.1_Linux_arm64.tar.gz";
-    x86_64-darwin = "https://github.com/complex-gh/seedify/releases/download/v1.0.1/seedify_1.0.1_Darwin_x86_64.tar.gz";
-    aarch64-darwin = "https://github.com/complex-gh/seedify/releases/download/v1.0.1/seedify_1.0.1_Darwin_arm64.tar.gz";
+    i686-linux = "https://github.com/complex-gh/seedify/releases/download/v1.1.0/seedify_1.1.0_Linux_i386.tar.gz";
+    x86_64-linux = "https://github.com/complex-gh/seedify/releases/download/v1.1.0/seedify_1.1.0_Linux_x86_64.tar.gz";
+    armv6l-linux = "https://github.com/complex-gh/seedify/releases/download/v1.1.0/seedify_1.1.0_Linux_armv6.tar.gz";
+    armv7l-linux = "https://github.com/complex-gh/seedify/releases/download/v1.1.0/seedify_1.1.0_Linux_armv7.tar.gz";
+    aarch64-linux = "https://github.com/complex-gh/seedify/releases/download/v1.1.0/seedify_1.1.0_Linux_arm64.tar.gz";
+    x86_64-darwin = "https://github.com/complex-gh/seedify/releases/download/v1.1.0/seedify_1.1.0_Darwin_x86_64.tar.gz";
+    aarch64-darwin = "https://github.com/complex-gh/seedify/releases/download/v1.1.0/seedify_1.1.0_Darwin_arm64.tar.gz";
   };
   sourceRootMap = {
-    i686-linux = "seedify_1.0.1_Linux_i386";
-    x86_64-linux = "seedify_1.0.1_Linux_x86_64";
-    armv6l-linux = "seedify_1.0.1_Linux_armv6";
-    armv7l-linux = "seedify_1.0.1_Linux_armv7";
-    aarch64-linux = "seedify_1.0.1_Linux_arm64";
-    x86_64-darwin = "seedify_1.0.1_Darwin_x86_64";
-    aarch64-darwin = "seedify_1.0.1_Darwin_arm64";
+    i686-linux = "seedify_1.1.0_Linux_i386";
+    x86_64-linux = "seedify_1.1.0_Linux_x86_64";
+    armv6l-linux = "seedify_1.1.0_Linux_armv6";
+    armv7l-linux = "seedify_1.1.0_Linux_armv7";
+    aarch64-linux = "seedify_1.1.0_Linux_arm64";
+    x86_64-darwin = "seedify_1.1.0_Darwin_x86_64";
+    aarch64-darwin = "seedify_1.1.0_Darwin_arm64";
   };
 in
 stdenvNoCC.mkDerivation {
   pname = "seedify";
-  version = "1.0.1";
+  version = "1.1.0";
   src = fetchurl {
     url = urlMap.${system};
     sha256 = shaMap.${system};
