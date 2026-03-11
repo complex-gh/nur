@@ -9,13 +9,13 @@
 let
   inherit (stdenvNoCC.hostPlatform) system;
   shaMap = {
-    i686-linux = "121a2iilk99s4zcqbpxn58ks8fml0x2lvbif7gpsh2rq68mz5ryq";
-    x86_64-linux = "1wy589i7hw5f82ynzlhs9a2w2sqhqsixzzdp9inc1h1g9nn30xgr";
-    armv6l-linux = "14cbxwcjbgcggvr3dwyzmdpgpaw8hcldpvqbih6aqfi5q4q7q454";
-    armv7l-linux = "0ijxhg26frj9jw52yhixgjdjiqv5f1s8xl7blaapcfvlvm45f19k";
-    aarch64-linux = "055fjjlxpnl6s04kmzcclfhr5mf1ij5dy548b8wp46mj99qmwp2v";
-    x86_64-darwin = "0hv35fx01xcqizjqjcrfa25yynbr84sw4h7avlmsflbz16dhl81f";
-    aarch64-darwin = "1rc7bqk9031pyikpl35idp7l3wa7kl91nal78dvp59mm514pi0ml";
+    i686-linux = "08mq4ip8c0gky6np1i2lcnhrh3rg9nnw7ln522x29asj6nwa0lng";
+    x86_64-linux = "0dm1qca7q5g3nsyby4w83lscmmp9syvdl2ryxkm16kh7q6xnjr93";
+    armv6l-linux = "1h14z195pnh6krlx96balclm5b0h6lwq39fc1k4r2bqvwm8mjil4";
+    armv7l-linux = "0ch4i6z02y1jbs12l6wml0pw0g2mnz4sds7dglbb6h09wx255h44";
+    aarch64-linux = "1wyx4q4nf2x6iwqb3qfrkbaxcmvlkj3s96qmmfyill8yvc4bj6hd";
+    x86_64-darwin = "0sajy2k9gzradxhsn6rfiblih4mh24crf57xshbryzrkrzrj88c8";
+    aarch64-darwin = "0lg5zq2l99snrnfgq8krnvkg9pf14b9vp1n0hpi3pmrsnrfcsr2v";
   };
 
   urlMap = {
